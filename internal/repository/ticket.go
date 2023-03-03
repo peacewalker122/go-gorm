@@ -61,12 +61,16 @@ func (t *TicketRepository) GetAllTickets(filter *entity.TicketFilter, opt ...str
 	var (
 		ticketModels []*model.Ticket
 		subquery     = t.db
+		whereQuery   = t.db
 	)
 
 	offset := (filter.Page - 1) * filter.PageSize
 
-	dbResult := t.db.Model(&ticketModels).Where("status = ?", filter.Status.String()).
-		Where("updated_at is null")
+	dbResult := t.db.Model(&ticketModels).
+		Where(whereQuery.
+			Where("status = ?", filter.Status.String()).
+			Where("room_id = ?", filter.RoomID),
+		)
 
 	switch {
 	case filter.Assigned != uuid.Nil:

@@ -1,0 +1,2 @@
+ALTER TABLE ticket
+    ADD COLUMN room_id uuid REFERENCES room(id) ON DELETE SET NULL;

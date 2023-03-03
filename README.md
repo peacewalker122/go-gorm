@@ -9,20 +9,16 @@
 
 ## Getting started
 
-    To get started with this project, follow these steps:
+### To get started with this project, follow these steps:
 
-    **Clone the repository:**
+**Clone the repository:**
 
-        git clone https://github.com/peacewalker122/go-gorm.git
-
+    git clone https://github.com/peacewalker122/go-gorm.git
 ## Navigate to the project directory:
-
     cd go-gorm
+### Install the dependencies:
+    go mod download
+### Run the application: 
+    sh run.sh
     
-    Install the dependencies:
-        go mod download
-
-    Run the application: 
-        sh run.sh
-    
-    The application will now be running on http://localhost:8080.
+### The application will now be running on http://localhost:8080.

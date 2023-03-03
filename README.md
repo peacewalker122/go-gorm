@@ -24,5 +24,4 @@
 ### The application will now be running on http://localhost:8080.
 
 ## Database Schema
-
-{{< figure src="/assets/jira-clone2.png" title="Database Schema" >}}
+![Database Schema](./assets/jira-clone2.png "Database Schema")
